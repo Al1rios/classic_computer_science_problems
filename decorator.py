@@ -1,11 +1,11 @@
 
-def fabric_multiplication():
+def multiplication_factory():
     def multiply(a):
         return a * 2
     return multiply
 
-double = fabric_multiplication()
-double2 = fabric_multiplication()
+double = multiplication_factory()
+double2 = multiplication_factory()
 
 print(double is double2)
 print(double(2))
