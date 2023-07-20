@@ -1,7 +1,7 @@
 
 """
 >>> app = Flask()
->>> set(app.route)
+>>> set(app.routes)
 set()
 >>> @app.route('/')
 ... def root():
