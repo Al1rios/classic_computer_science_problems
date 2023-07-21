@@ -11,7 +11,7 @@ set()
 {'/'}
 >>> root()
 'root'
->>> @app.execute('/')
+>>> app.execute('/')
 'root'
 >>> @app.route('/name')
 ... def name(user):
@@ -23,8 +23,9 @@ set()
 'Name: python'
 >>> app.execute('/name', 'Pro')
 'Name: Pro'
->>> @app.execute('/not_found')
+>>> app.execute('/not_found')
 404
+
 """
 
 class Flask:
