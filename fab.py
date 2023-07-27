@@ -2,13 +2,19 @@ import pytest
 
 
 def fatorial(n):
-    if n == 2:
-        return 2
-    elif n == 3:
-        return 6
-    return 1
+    pr = 1
+    for i in range(2, n + 1):
+        pr *= i
+    return pr
 
 
-@pytest.mark.parametrize('n, expected', [(1, 1), (2, 2), (3, 6)])
+
+@pytest.mark.parametrize('n, expected', [(-1, 1), (1, 1), (2, 2), (3, 6), (5, 120)])
 def test_factorial(n, expected):
     assert expected == fatorial(n)
+
+
+def test_atri_func():
+    fat = fatorial
+    assert 120, fat(5)
+    assert fat is fatorial
