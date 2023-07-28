@@ -21,3 +21,4 @@ def test_atri_func():
 
 # >>> map(fatorial, range(1, 5))
 # >>> list(_) verify range fatorial of 1 - 5
+# [1, 2, 6, 24]
